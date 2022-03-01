@@ -15,8 +15,6 @@ class App {
         $this->log = new Log;
         $this->user = new User;
 
-        // $this->log->destroy(6);
-
         if (isset($_POST['answer'])) {
             $this->submitAnswer();
         }

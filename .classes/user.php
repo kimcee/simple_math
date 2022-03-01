@@ -12,6 +12,11 @@ class User {
             $this->logIn($_POST['password']);
             $this->goHome();
         }
+
+        // check for logout
+        if (!empty($_GET['logout'])) {
+            $this->logOut();
+        }
         
         // check for cookie
         if (!$this->isLoggedIn() && isset($_COOKIE[self::_COOKIE_NAME])) {
